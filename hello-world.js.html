@@ -1,0 +1,18 @@
+静态html
+<div id="app">
+  Hello World
+</div>
+
+<hr>
+js 控制
+<div id="app-2">
+
+</div>
+
+<script>
+  // document.findDocumentById('app-2').innerHtml = "Hello World"
+  document.getElementById('app-2').innerHTML = 'Hello World'
+  setTimeout(function() {
+    document.getElementById('app-2').innerText = '哈哈😀😀😀!'
+  }, 3000)
+</script>
