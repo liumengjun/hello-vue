@@ -3,6 +3,11 @@
 </div>
 <hr />
 
+<h4>
+  v-bind: 缩写`:`, 即一个冒号，绑定属性。
+  <br>
+  普通属性不用v-bind, v-bind绑定的vue数据，需要vue组件中声明，即js代码里写。
+</h4>
 <div id="app-2">
   <span v-bind:title="message">
     Hover your mouse over me for a few seconds to see my dynamically bound title!
@@ -10,11 +15,27 @@
 </div>
 <hr />
 
+<h4>v-if='var', var变量值控制是否渲染</h4>
 <div id="app-3">
   <p v-if="seen">Now you see me</p>
 </div>
 <hr />
 
+<h4>v-on: 缩写`@`，即一个冒号</h4>
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+<hr />
+
+<h4>v-model, 数据和input绑定</h4>
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+<hr />
+
+<h4>v-for</h4>
 <div id="app-4">
   <ol>
     <li v-for="todo in todos">
@@ -24,18 +45,13 @@
 </div>
 <hr />
 
-<div id="app-5">
-  <p>{{ message }}</p>
-  <button v-on:click="reverseMessage">Reverse Message</button>
-</div>
-<hr />
-
-<div id="app-6">
-  <p>{{ message }}</p>
-  <input v-model="message">
-</div>
-<hr />
-
+<h4>自定义组件</h4>
+<textarea disabled readonly style="width: 50%; height: 66px; overflow: hidden; resize: none; margin-left: 22px;">
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+</textarea>
 <div id="app-7">
   <ol>
     <!-- Now we provide each todo-item with the todo object    -->
@@ -119,3 +135,13 @@
   });
 
 </script>
+<style>
+  hr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+</style>
