@@ -9,10 +9,23 @@ js 控制
 
 </div>
 
+<hr>
+jquery 控制
+<div id="app-3">
+
+</div>
+
 <script>
   // document.findDocumentById('app-2').innerHtml = "Hello World"
-  document.getElementById('app-2').innerHTML = 'Hello World'
+  document.getElementById('app-2').innerHTML = 'Hello JS'
   setTimeout(function() {
     document.getElementById('app-2').innerText = '哈哈😀😀😀!'
   }, 3000)
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $('#app-3').html('Hello JQuery')
+  setTimeout(function() {
+    $('#app-3').text('😀😀')
+  }, 4000)
 </script>
