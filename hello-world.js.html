@@ -1,18 +1,21 @@
 静态html
-<div id="app">
-  Hello World
+<div id="app" style="color: #FF3640;">
+  Hello HTML
 </div>
+<style>
+  #app {
+    font-style: italic;
+  }
+</style>
 
 <hr>
 js 控制
 <div id="app-2">
-
 </div>
 
 <hr>
 jquery 控制
 <div id="app-3">
-
 </div>
 
 <script>
@@ -22,6 +25,7 @@ jquery 控制
     document.getElementById('app-2').innerText = '哈哈😀😀😀!'
   }, 3000)
 </script>
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
   $('#app-3').html('Hello JQuery')
